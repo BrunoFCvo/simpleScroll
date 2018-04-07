@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scroll</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="sscroll.js"></script>
+		<link rel="stylesheet" type="text/css" href="reset.css"></link>
+		<link rel="stylesheet" type="text/css" href="sscroll.css"></link>
+		<style>
+			html, body {
+				height: 100%;
+				background-color: lightgrey;
+			}
+
+			#container {
+				position: relative;
+				margin: auto;
+				height: 100%;
+				width: 80%;
+				overflow: hidden;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+			
+			#container .sscroll_wrapper {
+				background-color: #fff;
+			}
+			
+			#container .sscroll_rail {
+				width: 25px;
+				right: 3px;
+			}
+			
+			#container .sscroll_bar {
+				width: 25px;
+				background-color: grey;
+				border-radius: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+		
+			<div class="sscroll_wrapper">
+				<div class="sscroll_content">
+					<img src="test-image.jpg"/>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		var container = document.querySelector(".sscroll_wrapper");
+		var scroll = new SimpleScroll({
+			domElement : container,
+			autoResize : 100
+		});
+	</script>
+</html>

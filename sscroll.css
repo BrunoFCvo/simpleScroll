@@ -1,0 +1,22 @@
+.sscroll_wrapper {
+	display: flex;
+	max-height: 100%;
+	
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.sscroll_content {
+	flex-grow: 1;
+}
+
+.sscroll_rail {
+	position: absolute;
+	top: 0; bottom: 0;
+	right: 0;
+}
+
+.sscroll_bar {
+	position: absolute;
+	cursor: pointer;
+}
